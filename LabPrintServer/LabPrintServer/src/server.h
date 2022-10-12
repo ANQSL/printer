@@ -5,6 +5,7 @@
 #include <QTcpServer>
 #include <QTcpSocket>
 #include "QQueue"
+#include "QPrinterInfo"
 class Server : public QObject
 {
     Q_OBJECT
@@ -18,6 +19,7 @@ private slots:
     void sendFileSingal();//向客户端发送发送文件信号
     void startPrintSlot();//开始打印文件
     void scoketError(QAbstractSocket::SocketError);
+    void setSaveFalg(bool falg);
 signals:
     void acceptDataFinish();//当前客户端数据接收完毕
     void startPrint();//开始打印
@@ -32,6 +34,7 @@ private:
     bool findFileEnd();//查找文件信息的帧尾
     void getFileMsg();
     void getFileData();//获取文件数据
+    void saveFile();
     QTcpServer *server;//服务端
     QQueue<QTcpSocket *> sockets;//客户队列
 
@@ -41,8 +44,10 @@ private:
         qint64 size;
         char   data[8];
     }FileSize;
+    QByteArray filedata;//文件数据
     FileSize filesize;
     QString filename;
+    bool save_falg;//文件是否存储标志
 };
 
 #endif // SERVER_H

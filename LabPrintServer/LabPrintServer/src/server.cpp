@@ -1,5 +1,9 @@
 #include "server.h"
 #include "QFile"
+#include "QTextDocument"
+#include "qt_windows.h"
+#include "winspool.h"
+#include "QCoreApplication"
 Server::Server(QObject *parent) : QObject(parent)
 {
     initParameter();
@@ -10,6 +14,7 @@ Server::Server(QObject *parent) : QObject(parent)
 void Server::initParameter()
 {
     server=new QTcpServer();
+    this->save_falg=false;
 }
 
 void Server::setConnect()
@@ -69,8 +74,11 @@ bool Server::findFileEnd()
           if(data[i]==char(0xBE)&&data[i+1]==char(0xEB)&&data[i+2]==char(0xEB)&&data[i+3]==char(0xBE))
           {
               QFile file(filename);
-              file.open(QIODevice::WriteOnly);
-              file.close();
+              if(!file.exists())
+              {
+                  file.open(QIODevice::WriteOnly);
+                  file.close();
+              }
               file.open(QIODevice::Append);
               file.write(data.left(i));
               file.close();
@@ -110,13 +118,23 @@ void Server::getFileData()
 {
     if(findFileEnd())
     {
-        QFile file(filename);
+        saveFile();
+        data.clear();
+    }
+}
+
+void Server::saveFile()
+{
+
+    QFile file(filename);
+    if(!file.exists())
+    {
         file.open(QIODevice::WriteOnly);
         file.close();
-        file.open(QIODevice::Append);
-        file.write(data);
-        file.close();
     }
+    file.open(QIODevice::Append);
+    file.write(data);
+    file.close();
 }
 void Server::appendSocket()
 {
@@ -184,7 +202,22 @@ void Server::sendFileSingal()
 void Server::startPrintSlot()
 {
     qDebug()<<"开始打印文件";
-    QFile::remove(filename);
+//    QFile::remove(filename);
+    if(!save_falg)
+    {
+        QStringList printer_name=QPrinterInfo::availablePrinterNames();
+        qDebug()<<printer_name;
+        QString path="D:/Qt/printer/LabPrintServer/LabPrintServer/"+filename;
+        qDebug()<<path;
+        ShellExecuteW(NULL,
+                      QString("print").toStdWString().c_str(),
+                      path.toStdWString().c_str(),
+                      NULL,
+                      NULL,
+                      SW_HIDE
+                      );
+//        QFile::remove(filename);
+    }
     filename="";
     emit endPrint();
 }
@@ -195,5 +228,10 @@ void Server::scoketError(QAbstractSocket::SocketError error)
     {
         reSetSocket();
     }
+}
+
+void Server::setSaveFalg(bool falg)
+{
+    this->save_falg=falg;
 }
 

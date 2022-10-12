@@ -250,6 +250,7 @@ Makefile: LabPrintServer.pro C:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++/
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/yacc.prf \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/lex.prf \
 		LabPrintServer.pro \
+		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5PrintSupport.prl \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Widgets.prl \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Gui.prl \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Network.prl \
@@ -437,6 +438,7 @@ C:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/exceptions.prf:
 C:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/yacc.prf:
 C:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/lex.prf:
 LabPrintServer.pro:
+C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5PrintSupport.prl:
 C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Widgets.prl:
 C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Gui.prl:
 C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Network.prl:
