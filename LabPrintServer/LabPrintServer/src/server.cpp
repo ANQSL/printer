@@ -1,8 +1,6 @@
 #include "server.h"
 #include "QFile"
 #include "QTextDocument"
-#include "qt_windows.h"
-#include "winspool.h"
 #include "QCoreApplication"
 Server::Server(QObject *parent) : QObject(parent)
 {
@@ -15,6 +13,16 @@ void Server::initParameter()
 {
     server=new QTcpServer();
     this->save_falg=false;
+    shell_info.cbSize=sizeof(SHELLEXECUTEINFO);
+    shell_info.fMask=SEE_MASK_NOCLOSEPROCESS;
+    shell_info.hwnd=NULL;
+    shell_info.lpVerb=TEXT("print");
+    shell_info.lpParameters=TEXT("");
+    shell_info.lpDirectory=NULL;
+    shell_info.nShow=SW_HIDE;
+    shell_info.hInstApp=NULL;
+
+
 }
 
 void Server::setConnect()
@@ -83,7 +91,7 @@ bool Server::findFileEnd()
               file.write(data.left(i));
               file.close();
               data.remove(0,i+3);
-              qDebug()<<"文件传输结束";
+//              qDebug()<<"文件传输结束";
               emit startPrint();
           }
       }
@@ -102,12 +110,12 @@ void Server::getFileMsg()
         {
             i+=2;
             QByteArray array;
-            for(;i<data.size()&&data[i]!=char(0xEB)&&data[i+1]!=char(0xBE);i++)
+            for(;i<data.size()&&!(data[i]==char(0xEB)&&data[i+1]==char(0xBE));i++)
             {
                 array.append(data[i]);
             }
             filename=QString(array);
-            qDebug()<<filename;
+//            qDebug()<<filename;
             data.remove(0,i+1);
             break;
         }
@@ -173,7 +181,7 @@ void Server::reSetSocket()
 {
 
     //断开数据传输完成的客户端
-    qDebug()<<"下一个客户端";
+//    qDebug()<<"下一个客户端";
     //队列为空就不操作
     if(!this->sockets.isEmpty())
     {
@@ -202,21 +210,14 @@ void Server::sendFileSingal()
 void Server::startPrintSlot()
 {
     qDebug()<<"开始打印文件";
-//    QFile::remove(filename);
     if(!save_falg)
     {
-        QStringList printer_name=QPrinterInfo::availablePrinterNames();
-        qDebug()<<printer_name;
-        QString path="D:/Qt/printer/LabPrintServer/LabPrintServer/"+filename;
+        QString path="D:/project/Qt/printer/LabPrintServer/LabPrintServer/"+filename;
         qDebug()<<path;
-        ShellExecuteW(NULL,
-                      QString("print").toStdWString().c_str(),
-                      path.toStdWString().c_str(),
-                      NULL,
-                      NULL,
-                      SW_HIDE
-                      );
-//        QFile::remove(filename);
+        shell_info.lpFile=path.toStdWString().c_str();
+        ShellExecuteExW(&shell_info);
+        WaitForSingleObject(shell_info.hProcess,INFINITE);
+        QFile::remove(filename);
     }
     filename="";
     emit endPrint();

@@ -6,6 +6,7 @@
 #include <QTcpSocket>
 #include "QQueue"
 #include "QPrinterInfo"
+#include "windows.h"
 class Server : public QObject
 {
     Q_OBJECT
@@ -48,6 +49,7 @@ private:
     FileSize filesize;
     QString filename;
     bool save_falg;//文件是否存储标志
+    SHELLEXECUTEINFO shell_info;
 };
 
 #endif // SERVER_H

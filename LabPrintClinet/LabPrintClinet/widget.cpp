@@ -31,6 +31,7 @@ void Widget::deletePrintFile(int index)
 
 void Widget::clearFile()
 {
+    ui->open_dir->setEnabled(true);
     int count=ui->file_list->count();
     for(int i=0;i<count;i++)
     {
@@ -87,4 +88,5 @@ void Widget::on_open_dir_clicked()
 void Widget::on_print_clicked()
 {
     clinet.connectServer();
+    ui->open_dir->setEnabled(false);
 }
