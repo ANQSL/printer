@@ -2,11 +2,13 @@
 #include "QFile"
 #include "QTextDocument"
 #include "QCoreApplication"
+#include "config.h"
 Server::Server(QObject *parent) : QObject(parent)
 {
     initParameter();
     setConnect();
-    this->server->listen(QHostAddress::LocalHost,7777);
+    quint16 port=Config::getPort();
+    this->server->listen(QHostAddress::Any,port);
 }
 
 void Server::initParameter()
@@ -81,7 +83,8 @@ bool Server::findFileEnd()
       {
           if(data[i]==char(0xBE)&&data[i+1]==char(0xEB)&&data[i+2]==char(0xEB)&&data[i+3]==char(0xBE))
           {
-              QFile file(filename);
+              QString file_path=Config::getTempPath()+"/"+filename;
+              QFile file(file_path);
               if(!file.exists())
               {
                   file.open(QIODevice::WriteOnly);
@@ -134,7 +137,8 @@ void Server::getFileData()
 void Server::saveFile()
 {
 
-    QFile file(filename);
+    QString file_path=Config::getTempPath()+"/"+filename;
+    QFile file(file_path);
     if(!file.exists())
     {
         file.open(QIODevice::WriteOnly);
@@ -212,12 +216,12 @@ void Server::startPrintSlot()
     qDebug()<<"开始打印文件";
     if(!save_falg)
     {
-        QString path="D:/project/Qt/printer/LabPrintServer/LabPrintServer/"+filename;
-        qDebug()<<path;
-        shell_info.lpFile=path.toStdWString().c_str();
+        QString file_path=Config::getTempPath()+"/"+filename;
+        qDebug()<<file_path;
+        shell_info.lpFile=file_path.toStdWString().c_str();
         ShellExecuteExW(&shell_info);
         WaitForSingleObject(shell_info.hProcess,INFINITE);
-        QFile::remove(filename);
+        QFile::remove(file_path);
     }
     filename="";
     emit endPrint();

@@ -43,6 +43,8 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         fillename = new QLabel(FileProgress);
         fillename->setObjectName(QString::fromUtf8("fillename"));
+        fillename->setMinimumSize(QSize(100, 20));
+        fillename->setMaximumSize(QSize(100, 20));
 
         horizontalLayout->addWidget(fillename);
 
