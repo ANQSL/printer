@@ -1,0 +1,2 @@
+D:\Qt5.14.2\Tools\mingw730_64\bin\ar.exe qc libclinet.a CMakeFiles/clinet.dir/client.cpp.obj CMakeFiles/clinet.dir/config.cpp.obj
+D:\Qt5.14.2\Tools\mingw730_64\bin\ranlib.exe libclinet.a

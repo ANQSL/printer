@@ -1,0 +1,6 @@
+{
+    "server": {
+        "port": 7777
+    },
+    "temp_path": "D:/project/Qt/labprinter/LabPrintServer/LabPrintServer/templ"
+}

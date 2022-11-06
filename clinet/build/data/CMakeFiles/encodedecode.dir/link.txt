@@ -1,0 +1,2 @@
+D:\Qt5.14.2\Tools\mingw730_64\bin\ar.exe qc libencodedecode.a CMakeFiles/encodedecode.dir/Data.cpp.obj CMakeFiles/encodedecode.dir/encodedecode.cpp.obj
+D:\Qt5.14.2\Tools\mingw730_64\bin\ranlib.exe libencodedecode.a

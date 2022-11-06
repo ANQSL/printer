@@ -1,0 +1,7 @@
+-ID:/project/Qt/printer/printerv1.1/clinet/clinet
+-ID:/project/Qt/printer/printerv1.1/clinet/data
+-ID:/project/Qt/printer/printerv1.1/clinet/ui
+-DWIN32
+-o
+D:/project/Qt/printer/printerv1.1/clinet/build/clinet/moc_client.cpp
+D:/project/Qt/printer/printerv1.1/clinet/clinet/client.h

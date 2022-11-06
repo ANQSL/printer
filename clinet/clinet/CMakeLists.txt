@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10.0)
+project(clinet)
+qt5_wrap_cpp(moc_src client.h)
+aux_source_directory(. clinet_src)
+add_library(clinet ${clinet_src} ${moc_src})
+target_link_libraries(clinet Qt5::Widgets  Qt5::Network)

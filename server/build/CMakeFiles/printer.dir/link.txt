@@ -1,0 +1,3 @@
+D:\CMake\bin\cmake.exe -E rm -f CMakeFiles\printer.dir/objects.a
+D:\Qt5.14.2\Tools\mingw730_64\bin\ar.exe qc CMakeFiles\printer.dir/objects.a @CMakeFiles\printer.dir\objects1
+D:\Qt5.14.2\Tools\mingw730_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\printer.dir/objects.a -Wl,--no-whole-archive -o bin\printer.exe -Wl,--out-implib,libprinter.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\printer.dir\linkLibs.rsp

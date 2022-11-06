@@ -1,0 +1,2 @@
+D:\Qt5.14.2\Tools\mingw730_64\bin\ar.exe qc libui.a CMakeFiles/ui.dir/fileprogress.cpp.obj CMakeFiles/ui.dir/widget.cpp.obj CMakeFiles/ui.dir/moc_widget.cpp.obj CMakeFiles/ui.dir/moc_fileprogress.cpp.obj
+D:\Qt5.14.2\Tools\mingw730_64\bin\ranlib.exe libui.a

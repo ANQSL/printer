@@ -1,0 +1,12 @@
+D:/project/Qt/printer/printerv1.1/clinet/build/CMakeFiles/printclinet.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/CMakeFiles/edit_cache.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/CMakeFiles/rebuild_cache.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/data/CMakeFiles/encodedecode.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/data/CMakeFiles/edit_cache.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/data/CMakeFiles/rebuild_cache.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/clinet/CMakeFiles/clinet.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/clinet/CMakeFiles/edit_cache.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/clinet/CMakeFiles/rebuild_cache.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/ui/CMakeFiles/ui.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/ui/CMakeFiles/edit_cache.dir
+D:/project/Qt/printer/printerv1.1/clinet/build/ui/CMakeFiles/rebuild_cache.dir

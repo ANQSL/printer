@@ -1,0 +1,9 @@
+D:/project/Qt/printer/printerv1.1/build/CMakeFiles/printer.dir
+D:/project/Qt/printer/printerv1.1/build/CMakeFiles/edit_cache.dir
+D:/project/Qt/printer/printerv1.1/build/CMakeFiles/rebuild_cache.dir
+D:/project/Qt/printer/printerv1.1/build/data/CMakeFiles/encodedecode.dir
+D:/project/Qt/printer/printerv1.1/build/data/CMakeFiles/edit_cache.dir
+D:/project/Qt/printer/printerv1.1/build/data/CMakeFiles/rebuild_cache.dir
+D:/project/Qt/printer/printerv1.1/build/server/CMakeFiles/server.dir
+D:/project/Qt/printer/printerv1.1/build/server/CMakeFiles/edit_cache.dir
+D:/project/Qt/printer/printerv1.1/build/server/CMakeFiles/rebuild_cache.dir

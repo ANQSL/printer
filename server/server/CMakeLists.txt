@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10.0)
+project(server)
+aux_source_directory(. src)
+qt5_wrap_cpp(moc_src server.h)
+add_library(server ${src} ${moc_src})
+target_link_libraries(server Qt5::Core Qt5::Network Qt5::PrintSupport)

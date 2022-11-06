@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "qvboxlayout": "cpp",
+        "memory": "cpp",
+        "istream": "cpp",
+        "functional": "cpp",
+        "new": "cpp",
+        "qspinbox": "cpp"
+    }
+}

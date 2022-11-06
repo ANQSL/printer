@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10.0)
+project(ui)
+qt5_wrap_cpp(moc_src widget.h fileprogress.h)
+aux_source_directory(. widget_src)
+add_library(ui ${widget_src} ${moc_src})
+target_link_libraries(ui Qt5::Widgets Qt5::Network)

@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+bab1dadbf90555fa21ab044386c42763 clinet/moc_client.cpp
+f980732a04fb50f10c141a63bd90d927 ui/moc_fileprogress.cpp
+f1afd32c3323e4c9c4c4d202e55fedb5 ui/moc_widget.cpp

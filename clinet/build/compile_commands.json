@@ -1,0 +1,52 @@
+[
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/printclinet.dir/includes_CXX.rsp -g -o CMakeFiles\\printclinet.dir\\main.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\main.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/main.cpp"
+},
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build/data",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe  @CMakeFiles/encodedecode.dir/includes_CXX.rsp -g -o CMakeFiles\\encodedecode.dir\\Data.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\data\\Data.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/data/Data.cpp"
+},
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build/data",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe  @CMakeFiles/encodedecode.dir/includes_CXX.rsp -g -o CMakeFiles\\encodedecode.dir\\encodedecode.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\data\\encodedecode.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/data/encodedecode.cpp"
+},
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build/clinet",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/clinet.dir/includes_CXX.rsp -g -o CMakeFiles\\clinet.dir\\client.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\clinet\\client.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/clinet/client.cpp"
+},
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build/clinet",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/clinet.dir/includes_CXX.rsp -g -o CMakeFiles\\clinet.dir\\config.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\clinet\\config.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/clinet/config.cpp"
+},
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build/clinet",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/clinet.dir/includes_CXX.rsp -g -o CMakeFiles\\clinet.dir\\moc_client.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\build\\clinet\\moc_client.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/build/clinet/moc_client.cpp"
+},
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build/ui",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/ui.dir/includes_CXX.rsp -g -o CMakeFiles\\ui.dir\\fileprogress.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\ui\\fileprogress.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/ui/fileprogress.cpp"
+},
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build/ui",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/ui.dir/includes_CXX.rsp -g -o CMakeFiles\\ui.dir\\widget.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\ui\\widget.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/ui/widget.cpp"
+},
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build/ui",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/ui.dir/includes_CXX.rsp -g -o CMakeFiles\\ui.dir\\moc_widget.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\build\\ui\\moc_widget.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/build/ui/moc_widget.cpp"
+},
+{
+  "directory": "D:/project/Qt/printer/printerv1.1/clinet/build/ui",
+  "command": "D:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/ui.dir/includes_CXX.rsp -g -o CMakeFiles\\ui.dir\\moc_fileprogress.cpp.obj -c D:\\project\\Qt\\printer\\printerv1.1\\clinet\\build\\ui\\moc_fileprogress.cpp",
+  "file": "D:/project/Qt/printer/printerv1.1/clinet/build/ui/moc_fileprogress.cpp"
+}
+]

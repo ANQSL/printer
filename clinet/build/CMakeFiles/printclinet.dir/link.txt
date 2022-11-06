@@ -1,0 +1,3 @@
+D:\CMake\bin\cmake.exe -E rm -f CMakeFiles\printclinet.dir/objects.a
+D:\Qt5.14.2\Tools\mingw730_64\bin\ar.exe qc CMakeFiles\printclinet.dir/objects.a @CMakeFiles\printclinet.dir\objects1
+D:\Qt5.14.2\Tools\mingw730_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\printclinet.dir/objects.a -Wl,--no-whole-archive -o bin\printclinet.exe -Wl,--out-implib,libprintclinet.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\printclinet.dir\linkLibs.rsp

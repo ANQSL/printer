@@ -1,0 +1,4 @@
+-DWIN32
+-o
+D:/project/Qt/printer/printerv1.1/build/server/moc_server.cpp
+D:/project/Qt/printer/printerv1.1/server/server.h
